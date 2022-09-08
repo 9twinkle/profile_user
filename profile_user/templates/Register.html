@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang ="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=egde">
+    <link rel="stylesheet" href="{% static 'css/Register.css' %}">
+    <title>Registration Form</title>
+ </head>   
+ <body>
+ <div id="First Div">
+    <h1>Student Registration Form</h1>
+    <div id="Second Div">
+       <form action="Submit" method="POST">
+         {% csrf_token %}
+          <h4>First Name <input type="text" name="First_Name"></h4>
+          <h4>Last Name <input type="text" name="Last_Name"></h4>
+          <h4>Email Id <input type="email" name="Email_Id"></h4>
+          <h4>Department Name <input type="text" name="Department_Name"></h4>
+          <h4>Section Name <input type="section" name="Section_Name"></h4>
+          <h4>Phone Number <input type="number" name="Phone_Number"></h4>
+          <h4 >Roll Number <input type="number" name="Roll_Number"></h4>
+          
+          <h1>{{msg}}</h1>
+          <input type="Submit">
+     </form>
+    </div>  
+    </div>
+ </body>
+</html>
